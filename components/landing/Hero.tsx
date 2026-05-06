@@ -8,12 +8,12 @@ export function Hero() {
 
       <div className="relative z-10 max-w-[48rem] lg:flex lg:min-h-[27.5rem] lg:flex-col lg:justify-center lg:pt-1">
         <h1
-          className="max-w-[16ch] font-serif text-[2.75rem] font-normal leading-[1.08] tracking-[-0.018em] text-plum sm:max-w-[15ch] sm:text-[3.25rem] lg:max-w-[17.5ch] lg:text-[3.3rem] xl:max-w-[18ch] xl:text-[3.45rem] [text-wrap:balance]"
+          className="max-w-[16ch] font-serif text-[2.5rem] font-normal leading-[1.11] tracking-[-0.015em] text-plum sm:max-w-[15ch] sm:text-[2.95rem] lg:max-w-[17.5ch] lg:text-[3.02rem] xl:max-w-[18ch] xl:text-[3.18rem] [text-wrap:balance]"
           style={{ textWrap: "balance" }}
         >
           Designing learning systems for human-centered experiences.
         </h1>
-        <p className="mt-9 max-w-[24rem] text-[0.98rem] leading-7 text-ink/86 sm:mt-11 sm:text-[1.03rem] sm:leading-8">
+        <p className="mt-7 max-w-[24rem] text-[0.98rem] leading-7 text-ink/86 sm:mt-8 sm:text-[1.03rem] sm:leading-8">
           Human Loop Lab creates thoughtful learning experiences, instructional
           systems, and UX-minded digital products that connect strategy, design,
           and meaningful impact.
