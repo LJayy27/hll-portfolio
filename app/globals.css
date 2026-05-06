@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #f6f0ea;
+  --sand: #efe1d5;
+  --mushroom: #e5d7cb;
+  --plum: #3e2a3a;
+  --copper: #c88a73;
+  --blush: #f1e7e1;
+  --orchid: #ccb6b4;
+  --turquoise: #6d8b87;
+  --ink: #514945;
+  --line: #dccfc5;
+  --card: rgba(252, 248, 244, 0.9);
+  --font-serif: "Instrument Serif", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
+  --font-sans: "Inter", "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), transparent 24%),
+    linear-gradient(180deg, rgba(249, 244, 239, 0.98), rgba(245, 238, 231, 0.98)),
+    var(--paper);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.14), transparent 40%),
+    radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.16), transparent 14%);
+  mix-blend-mode: screen;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.page-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-shell::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -7rem;
+  width: 23rem;
+  height: 16rem;
+  pointer-events: none;
+  opacity: 0.34;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(88, 71, 58, 0.14), transparent 9%),
+    radial-gradient(circle at 24% 14%, rgba(88, 71, 58, 0.06), transparent 16%),
+    radial-gradient(circle at 13% 30%, rgba(88, 71, 58, 0.04), transparent 20%);
+  filter: blur(1px);
+}
+
+.section-label {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.editorial-card {
+  background: linear-gradient(180deg, rgba(252, 248, 244, 0.96), rgba(248, 240, 233, 0.92));
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 30px rgba(92, 68, 62, 0.045);
+}
+
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform-origin: left;
+  transition: transform 200ms ease;
+}
+
+.link-underline:hover::after,
+.link-underline:focus-visible::after {
+  transform: scaleX(1.05);
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid rgba(111, 155, 158, 0.9);
+  outline-offset: 4px;
+}
+
+.paper-panel {
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.5), transparent 24%),
+    linear-gradient(180deg, rgba(251, 246, 241, 0.98), rgba(244, 234, 225, 0.94));
+}
